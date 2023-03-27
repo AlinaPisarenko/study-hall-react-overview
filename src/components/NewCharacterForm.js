@@ -6,22 +6,43 @@ const defaultData = {
   isGood: ''
 }
 
-export default function NewCharacterForm() {
+export default function NewCharacterForm({ handleAddChar }) {
+  const [formData, setFormData] = useState(defaultData)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const newObj = {...formData, isGood: Boolean(formData.isGood)}
+
+    handleAddChar(newObj)
+
+  }
+
+  const handleChange = (e) => {
+    setFormData({...formData, [e.target.name]: e.target.value})
+  }
+
+  console.log(formData)
+
 
   return (
   <div>
-    <form id='new-form'>
+    <form onSubmit={handleSubmit} id='new-form'>
         <input
+                value={formData.name}
+                onChange={handleChange}
                 name='name'
                 type="text"
                 placeholder="name"
               />
         <input
+                value={formData.image}
+                onChange={handleChange}
                 name='image'
                 type="text"
                 placeholder="image"
               />
-        <select  name='isGood'>
+        <select  name='isGood' value={formData.isGood} onChange={handleChange}>
           <option value={true}>Good</option>
           <option value={false}>Bad</option>
         </select>

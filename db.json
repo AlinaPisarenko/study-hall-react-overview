@@ -4,7 +4,7 @@
       "id": 1,
       "name": "James P. Sullivan",
       "image": "https://static.wikia.nocookie.net/pixar/images/0/04/Sully_Monsters_University.jpg",
-      "isGood": true
+      "isGood": false
     },
     {
       "id": 2,
@@ -35,6 +35,18 @@
       "name": "Henry J. Waternoose III",
       "image": "https://static.wikia.nocookie.net/villains/images/c/c4/Mr_Waternoose.png",
       "isGood": false
+    },
+    {
+      "name": "analk",
+      "image": "oicjsli",
+      "isGood": true,
+      "id": 7
+    },
+    {
+      "name": "wefdw",
+      "image": "fwe",
+      "isGood": true,
+      "id": 8
     }
   ]
 }
